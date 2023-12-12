@@ -1,0 +1,11 @@
+{% load menu_tags %}
+<li>
+  <span style="padding-left: {{ level }}em;"><a href={{ url }}>{{ name }}</a></span>
+</li>
+{% if url in current_url %}
+  {% for child in children %}
+    {% draw_menu_item child %}
+  {% endfor %}
+{% else %}
+  {% if children %}<span style="padding-left: {{ level }}em;"><a href={{ url }}>...</a></span>{% endif %}
+{% endif %}

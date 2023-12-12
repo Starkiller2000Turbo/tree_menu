@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load menu_tags %}
+{% block title %}
+  Программа для вывода древовидных структур
+{% endblock title %}
+{% block text %}
+  Меню
+{% endblock text %}
+{% block content %}
+  {% for menu in menus %}
+    {% draw_menu menu %}
+    {% if not forloop.last %}<hr>{% endif %}
+  {% endfor %}
+{% endblock content %}

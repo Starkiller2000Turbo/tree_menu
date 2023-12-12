@@ -1,0 +1,9 @@
+{% load menu_tags %}
+<article>
+  <ul>
+    <li>
+      <a href={{ url }}>Название: {{ name }}</a>
+    </li>
+  </ul>
+  <p>{% draw_menu_item root_item %}</p>
+</article>
