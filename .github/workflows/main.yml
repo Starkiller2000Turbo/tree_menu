@@ -3,7 +3,7 @@ name: Main Menus Workflow
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   backend_tests:
